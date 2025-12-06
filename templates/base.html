@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoteStream</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'style.css')}}">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+    <nav class="flex items-center justify-between bg-gray-300 p-4">
+        <a href="/" class="font-bold text-xl">
+            🌊 NoteStream
+        </a>
+        <a href="/create" class="text-white bg-blue-500 hover:bg-blue-600 transition-colors duration-150 py-2 px-3 rounded-lg font-semibold">
+            + New Note
+        </a>
+    </nav>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+</body>
+</html>

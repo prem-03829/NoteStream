@@ -3,7 +3,7 @@ from .routes import main
 from .models import db, Note, Tag, note_tags
 
 def create_app():
-    app = Flask(__name__)
+    app = Flask(__name__, template_folder="../templates", static_folder="../static")
     app.config['SECRET_KEY'] = 'need-something-here'
     app.register_blueprint(main)
 
